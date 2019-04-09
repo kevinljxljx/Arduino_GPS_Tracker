@@ -6,4 +6,4 @@ The tracker was made with an arduino nano and a SIM808 modue.
 
 You have to put in your Google Map API key, Adafruit.io AIO Key and the mqtt topic in order for it to work. 
 
-sample: app.kevinliu.dev
+sample: https://app.kevinliu.dev
