@@ -1,0 +1,123 @@
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        height: 100%;
+      }
+      *{
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      p{
+        margin: 0;
+      }
+      .floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #eee;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        border-radius: 5px;
+        padding-left: 10px;
+      }
+      
+
+      [type="date"] {
+        background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+      }
+      [type="date"]::-webkit-inner-spin-button {
+        display: none;
+      }
+      [type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 0;
+      }
+      input{
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 3px 5px;
+        box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      }
+      button{
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 4px 5px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      }
+      section{
+        display: inline-block;
+      }
+
+      #filter{
+        position: absolute;
+        z-index: 20;
+        right: 10%;
+        top: 10px;
+        width:80px;
+        height: 40px;
+        transform: translateX(-50%);
+        display: none;
+      }
+      .mobileonly{
+        display: none;
+      }
+      #loading{
+        position: absolute;
+        z-index: 20;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #D5D5D5;
+        font-weight: 600;
+        
+      }
+      .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      @media screen and (max-width: 576px) {
+        section,
+        #filter{
+          display:block;
+        }
+        .floating-panel {
+          top: 0;
+          left: 0;
+          padding: 5px;
+          width: 100%;
+          display: none;
+        }
+        .floating-panel.active {
+          display: block;
+        }
+        .mobileonly{
+          position: absolute;
+          right: 5px;
+          top: 8px;
+          display: inline-block;
+        }
+
+      }

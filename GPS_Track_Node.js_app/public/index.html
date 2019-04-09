@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Heatmaps</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div id="loading">
+        <div class="loader"></div>
+        <div style="position: absolute;">
+          <p>loading</p>
+        </div>
+    </div>
+    <div class="floating-panel" id="modal1">
+      <section >
+          <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+          <button onclick="changeRadius()">Change radius</button>
+          <button class="mobileonly" data-deactivate="modal1">X</button>
+      </section>
+      <section>
+          <p style="display:inline-block;">Start</p>
+          <input class="dateselect" type="date" id="startdate">
+          <p style="display:inline-block;">End</p>
+          <input class="dateselect" type="date" id="enddate">
+      </section>
+      <section>
+          <button onclick="displaySelect('1')">One Day</button>
+          <button onclick="displaySelect('7')">One Week</button>
+          <button onclick="displaySelect('all')">All</button>
+      </section>
+    </div>
+
+    <button id="filter" data-activate="modal1">Filter</button>
+
+    <div id="map"></div>
+
+    <script src="process.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_MAP_API_KEY&libraries=visualization">
+    </script>
+
+  </body>
+</html>
