@@ -1,8 +1,8 @@
 {
     // -------------------gps data pull and init map-----------------------------
-    let rawdata;
-    let startdate;
-    let enddate;
+    var rawdata;
+    var startdate;
+    var enddate;
     
     // data query function
     async function getData(){
